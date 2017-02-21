@@ -1,5 +1,5 @@
 PImage img;
-ArrayList<V3> pix;
+ArrayList<HLine> pix;
 color bg;
 
 //modify these
@@ -19,7 +19,7 @@ void setup() {
   noFill();
   image(img, 0, 0);  
   loadPixels();
-  pix = new ArrayList<V3>();
+  pix = new ArrayList<HLine>();
   
   //grab points
   boolean started;
@@ -37,7 +37,7 @@ void setup() {
       
       if ((get(j, i) == bg  || j == width - 1) && started) { //end point
         x2 = j;
-        pix.add(new V3(x1, x2, y));
+        pix.add(new HLine(x1, x2, y));
         started = false;
       }
     }
@@ -66,9 +66,9 @@ void draw() {
   
 }
 
-class V3 { //probably unnecessary
+class HLine { //probably unnecessary
   int x1, y, x2;
-  V3 (int x1, int x2, int y) {
+  HLine (int x1, int x2, int y) {
     this.x1 = x1;
     this.y = y;
     this.x2 = x2;
