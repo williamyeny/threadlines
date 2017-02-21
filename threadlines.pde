@@ -53,14 +53,15 @@ void draw() {
     for (V3 v : pix) {
       stroke(0, 0, 0);
       if (smooth) {
-        bezier(v.x1, v.y, (v.x1+v.x2)/2, v.y + random(-looseness, looseness), (v.x1+v.x2)/2, v.y + random(-looseness, looseness), v.x2, v.y);
+        bezier(v.x1, v.y, (v.x1+v.x2)/2, v.y + random(-looseness, looseness), 
+          (v.x1+v.x2)/2, v.y + random(-looseness, looseness), v.x2, v.y);
       } else {
         bezier(v.x1, v.y, random(v.x1,v.x2), v.y + random(-looseness, looseness),
           random(v.x1,v.x2), v.y + random(-looseness, looseness), v.x2, v.y);
       }
     }
   }
-  saveFrame("m" + margin + "t" + threads+ "l" + looseness + ".png");
+  saveFrame("m" + margin + " t" + threads+ " l" + looseness + " t" + thickness + ".png");
   exit();
   
 }
