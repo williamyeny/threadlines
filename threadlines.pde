@@ -14,7 +14,7 @@ void setup() {
   size(1280, 720); //replace with w/h of your image
   bg = color(255, 255, 255); //background color of your image
   
-   noFill();
+  noFill();
   image(img, 0, 0);  
   loadPixels();
   pix = new ArrayList<V3>();
