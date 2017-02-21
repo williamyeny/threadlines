@@ -66,7 +66,7 @@ void draw() {
   
 }
 
-class HLine { //probably unnecessary
+class HLine {
   int x1, y, x2;
   HLine (int x1, int x2, int y) {
     this.x1 = x1;
