@@ -50,7 +50,7 @@ void draw() {
   
   //draw threads
   for (int i = 0; i < threads; i++) {
-    for (V3 v : pix) {
+    for (HLine v : pix) {
       stroke(0, 0, 0);
       if (smooth) {
         bezier(v.x1, v.y, (v.x1+v.x2)/2, v.y + random(-looseness, looseness), 
