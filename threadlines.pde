@@ -7,12 +7,14 @@ int margin = 10;
 int threads = 3;
 int looseness = 10;
 boolean smooth = true;
+int thickness = 2;
 
 void setup() {
   //make sure to change these!
   img = loadImage("image.png"); //make sure to rename this to your image!
   size(1280, 720); //replace with w/h of your image
   bg = color(255, 255, 255); //background color of your image
+  strokeWeight(thickness);
   
   noFill();
   image(img, 0, 0);  
@@ -60,6 +62,7 @@ void draw() {
   }
   saveFrame("m" + margin + "t" + threads+ "l" + looseness + ".png");
   exit();
+  
 }
 
 class V3 { //probably unnecessary
