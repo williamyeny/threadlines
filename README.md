@@ -1,10 +1,10 @@
 # threadlines
 Convert images to thread lines!
 
-#usage
+## usage
 Modify the many variables inside and run it in Processing!
 
-#examples
+## examples
 Source image:
 ![s](https://i.imgur.com/78KNk4B.png)
 
